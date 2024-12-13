@@ -5,7 +5,7 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export function Get({ onMutate, onDelete }) {
   const { data, error, isLoading, mutate } = useSWR(
-    "http://localhost:3000/api/todo",
+    "/api/todo",
     fetcher
   );
 
