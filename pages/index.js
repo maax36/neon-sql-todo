@@ -11,7 +11,7 @@ export default function Home() {
 
   const NewTodo = async (newTodo) => {
     try {
-      const response = await fetch("http://localhost:3000/api/todo", {
+      const response = await fetch("/api/todo", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export default function Home() {
 
   const DeleteTodo = async (id) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/todo/${id}`, {
+      const response = await fetch(`/api/todo/${id}`, {
         method: "DELETE",
       });
       if (response.ok) {
